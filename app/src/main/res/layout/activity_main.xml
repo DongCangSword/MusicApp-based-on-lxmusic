@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/title_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/pingfang_bold_0"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/btn_account"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:importantForAccessibility="no"
+            android:src="@drawable/nav_sign_in"
+            app:tint="@color/colorNavActive" />
+    </RelativeLayout>
+
+    <!-- 页面容器 -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/bottom_nav_container" />
+
+    <!-- 底部导航+播放栏（为一体） -->
+    <LinearLayout
+        android:id="@+id/bottom_nav_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_rounded_nav">
+
+        <!-- 播放栏（紧邻导航） -->
+        <RelativeLayout
+            android:id="@+id/play_bar_root"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_playbar_cover"
+            android:elevation="2dp"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/playbar_cover"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:importantForAccessibility="no"
+                android:src="@android:drawable/ic_media_play" />
+
+            <TextView
+                android:id="@+id/playBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/playbar_cover"
+                android:text="@string/example_song"
+                android:fontFamily="@font/pingfang_regular_0"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btn_next_bar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_next" />
+
+            <ImageButton
+                android:id="@+id/btn_play_pause_bar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@id/btn_next_bar"
+                android:background="@null"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_play" />
+        </RelativeLayout>
+        <!-- 底部导航 -->
+        <LinearLayout
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/navBackground">
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/ic_nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/nav_home"
+                    app:tint="@color/colorNavNormal"
+                    android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/home"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:id="@+id/ic_nav_discover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/nav_discover"
+                    app:tint="@color/colorNavNormal"
+                    android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/nav_discover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/new_discover"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:id="@+id/ic_nav_broadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/nav_radio"
+                    app:tint="@color/colorNavNormal"
+                    android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/nav_broadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/broadcast"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:id="@+id/ic_nav_library"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/nav_library"
+                    app:tint="@color/colorNavNormal"
+                    android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/nav_library"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/library"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:id="@+id/ic_nav_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/nav_search"
+                    app:tint="@color/colorNavNormal"
+                    android:layout_marginBottom="2dp"/>
+                <TextView
+                    android:id="@+id/nav_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/search"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

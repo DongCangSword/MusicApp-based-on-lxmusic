@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MusicApp2025</string>
+    <string name="home">主页</string>
+    <string name="example_song">示例歌曲</string>
+    <string name="new_discover">新发现</string>
+    <string name="broadcast">广播</string>
+    <string name="library">资料库</string>
+    <string name="search">搜索</string>
+    <string name="example_otherwords">其他句（示例）</string>
+    <string name="example_nowwords">当前句（示例）</string>
+    <string name="example_songer">示例歌手</string>
+    <string name="example_playlist">播放列表（示例）</string>
+    <string name="exit_login">退出登录</string>
+    <string name="Subscription_Payment">订阅与付费</string>
+    <string name="edit_info">编辑资料</string>
+    <string name="user_example_com">user@example.com</string>
+    <string name="example_username">示例用户名</string>
+    <string name="account_setting">账户设置</string>
+</resources>

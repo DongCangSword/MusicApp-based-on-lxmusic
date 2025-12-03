@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用主色调 / 导航高亮 -->
+    <color name="colorNavActive">#FE213B</color>
+    <!-- 未选中导航文字颜色 -->
+    <color name="colorNavNormal">#918F92</color>
+
+    <!-- 页面背景（上方主页面整体背景） -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- 导航背景 -->
+    <color name="navBackground">#F8F8F8</color> <!-- 可根据你的UI设计修改此颜色 -->
+
+    <!-- 底部导航与上方主页面交界处渐变色终点 -->
+    <color name="navGradientEnd">#E8E6E9</color>
+    <color name="navGradientCenter">#FFF5F3F4</color>
+
+    <!-- 通用灰色 / 轻微背景 -->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="divider">#E6E6E6</color>
+
+    <!-- 播放器和图标主题色 -->
+    <color name="playerIcon">#FFECE2DA</color>
+    <color name="lyricsActive">#FFFFFF</color>
+    <color name="lyricsInactive">#B8A091</color>
+
+    <!-- 按钮选中背景色 -->
+    <color name="btnSelectedBg">#FFCCCCCE</color>
+
+    <!-- 错误 / 重要提示色（如资料库返回箭头、退出登录等） -->
+    <color name="danger">#F1122C</color>
+
+    <!-- 备用颜色 -->
+    <color name="black">#000000</color>
+    <color name="textPrimary">#222222</color>
+    <color name="textSecondary">#666666</color>
+</resources>

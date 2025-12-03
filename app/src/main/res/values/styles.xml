@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础主题：无 ActionBar，使用 Material Components 的光亮主题作为父主题（兼容性强） -->
+    <style name="Theme.MusicApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- 应用主要颜色 -->
+        <item name="colorPrimary">@color/colorNavActive</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- 窗口背景（主页面背景） -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <!-- 顶部状态栏/导航栏风格（可依需要调整） -->
+        <item name="android:statusBarColor">@color/colorNavActive</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- 默认文字颜色 -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+
+        <!-- 控件默认色（图标/控件主色） -->
+        <item name="colorAccent">@color/playerIcon</item>
+    </style>
+
+    <!-- Toolbar / 标题文字样式 -->
+    <style name="Widget.MusicApp.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:titleTextAppearance">@style/TextAppearance.MusicApp.Toolbar.Title</item>
+    </style>
+
+    <style name="TextAppearance.MusicApp.Toolbar.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <!-- 小注释 / 子标题 -->
+    <style name="TextAppearance.MusicApp.Subtitle" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+</resources>

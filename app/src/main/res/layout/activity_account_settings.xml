@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:ignore="Deprecated">
+
+    <!-- 半透明遮罩 -->
+    <View
+        android:id="@+id/account_mask"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!-- 底部弹出面板（圆角矩形） -->
+    <LinearLayout
+        android:id="@+id/account_panel"
+        android:layout_x="0dp"
+        android:layout_y="380dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/shape_rounded_card">
+
+        <!-- 顶部手柄 -->
+        <View
+            android:id="@+id/account_handle"
+            android:layout_width="48dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_rounded_card"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 标题栏 + 关闭 -->
+        <RelativeLayout
+            android:id="@+id/account_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/account_title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_setting"
+                android:textSize="18sp"
+                android:textColor="#222222"
+                android:fontFamily="@font/pingfang_bold_0"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_close"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+
+        <!-- 账户信息块 -->
+        <LinearLayout
+            android:id="@+id/account_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <ImageView
+                android:id="@+id/account_avatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:contentDescription="avatar"
+                android:background="@drawable/bg_account_avatar"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/account_meta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/account_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example_username"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+
+                <TextView
+                    android:id="@+id/account_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_example_com"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:fontFamily="@font/pingfang_regular_0"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View
+            android:id="@+id/account_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:background="#E6E6E6" />
+
+        <!-- 选项列表（示例） -->
+        <LinearLayout
+            android:id="@+id/account_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/bg_account_options">
+
+            <TextView
+                android:id="@+id/opt_profile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/account_options_bottom_line"
+                android:paddingStart="10dp"
+                android:text="@string/edit_info"
+                android:textColor="#111111"
+                android:fontFamily="@font/pingfang_regular_0"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E6E6E6" />
+
+            <TextView
+                android:id="@+id/opt_subscription"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/Subscription_Payment"
+                android:textColor="#111111"
+                android:fontFamily="@font/pingfang_regular_0"
+                tools:ignore="RtlSymmetry" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E6E6E6" />
+
+            <TextView
+                android:id="@+id/opt_logout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="@string/exit_login"
+                android:textColor="#F1122C"
+                android:fontFamily="@font/pingfang_bold_0"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <!-- 底部间距 -->
+        <View
+            android:id="@+id/account_bottom_space"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+    </LinearLayout>
+</AbsoluteLayout>
